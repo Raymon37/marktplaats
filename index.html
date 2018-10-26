@@ -4,39 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Sign Up Marktplaats</title>
-  <link rel="stylesheet" type="text/css" href="signupmp.css">
-  <script src="signupmp.js"></script>
+  <title>Marktplaats Project</title>
+  <link rel="stylesheet" type="text/css" href="mplogin.css">
+  <script src="marktplaats_login.js"></script>
+  
 </head>
 <body>
-  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Aanmelden</button>
+  <h2>Marktplaats Login</h2>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
 
 <div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <form class="modal-content" action="/action_page.php">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="marktplaats_logo.png" alt="Avatar" class="avatar">
+    </div>
+
     <div class="container">
-      <h1>Aanmelden</h1>
-      <p>Vul dit formulier in om een account te openen.</p>
-      <hr>
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" required>
+      <label for="uname"><b>Gebruiker</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
 
       <label for="psw"><b>Wachtwoord</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
-
-      <label for="psw-repeat"><b>Herhaal Wachtwoord</b></label>
-      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-      
+        
+      <button type="submit">Login</button>
       <label>
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Onthoudt mij
+        <input type="checkbox" checked="checked" name="remember"> 
       </label>
+    </div>
 
-      <p>Door een account te openen ga je akkoord met de voorwaarden <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
-      <div class="clearfix">
-        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        <button type="submit" class="signupbtn">Aanmelden</button>
-      </div>
+    <div class="container" style="background-color: whitesmoke">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
   </form>
 </div>
