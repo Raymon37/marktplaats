@@ -10,14 +10,18 @@
   <script src="searchbar.js"></script>
 </head>
 <body>
-  <div class="header">
-    <h1>MarktPlaats</h1>
-  </div>
+    <div class="header">
+        <h1>De plek om nieuwe en tweedehands spullen te kopen</h1>
+    </div>
   <div class="topnav">
     <a class="active" href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
+    <a href="#auto's">Auto's</a>
+    <a href="#computers">Computers</a>
+    <a href="#kleding">Kleding</a>
+    <a href="#muziek">Muziek</a>
+    <a href="#sport">Sport</a>
+    <a href="#verzamelen">Verzamelen</a>
+    <a href="#huis&tuin">Huis & Tuin</a>
     <div class="search-container">
       <form action="/action_page.php">
         <input type="text" name="search" placeholder="Search..">
@@ -66,10 +70,10 @@
   <div class="row">
     <div class="leftcolumn">
     <div class="card">
-      <div class="slideshow-container">
+      <div class="slideshow-container", background-color: blue;>
         <div class="mySlides fade">
           <div class="numbertext">1 / 3</div>
-          <img src="img_nature_wide.jpg" style="width:100%">
+          <img src="belsimpel_banner.jpg" style="width:100%">
           <div class="text">Caption Text</div>
         </div>
         <div class="mySlides fade">
@@ -97,24 +101,97 @@
         </div>
     </div>   
   <div class="card">
-   <h3>Popular Post</h3>
-   <div class="fakeimg"><p>Image</p></div>
-   <div class="fakeimg"><p>Image</p></div>
-   <div class="fakeimg"><p>Image</p></div>
+   <h3>Populaire Producten</h3>
+   <div id="myBtnContainer">
+    <button class="btn active" onclick="filterSelection('populair')"> Populair</button>
+    <button class="btn" onclick="filterSelection('auto')"> Auto</button>
+    <button class="btn" onclick="filterSelection('mobiel')"> Mobiel</button>
+    <button class="btn" onclick="filterSelection('lego')"> Lego</button>
   </div>
-  <div class="card">
-   <h2>Nieuwsbrief</h2>
+  
+  <!-- Portfolio Gallery Grid -->
+  <div class="row">
+    <div class="column auto">
+      <div class="content">
+        <img src="bmw.jpg" alt="BMW" style="width:100%">
+        <h4>Bmw</h4>
+        <p>Sportieve Bmw</p>
+      </div>
+    </div>
+    <div class="column auto">
+      <div class="content">
+      <img src="audi.jpg" alt="AUDI" style="width:100%">
+        <h4>Audi</h4>
+        <p>Sportieve Audi</p>
+      </div>
+    </div>
+    <div class="column auto">
+      <div class="content">
+      <img src="mercedes.jpg" alt="MERCEDES" style="width:100%">
+        <h4>Mercedes</h4>
+        <p>Nieuwe Mercedes</p>
+      </div>
+    </div>
+    
+    <div class="column mobiel">
+      <div class="content">
+        <img src="iphone.jpg" alt="Car" style="width:100%">
+        <h4>Iphone</h4>
+        <p>Iphone nieuwe in doos</p>
+      </div>
+    </div>
+    <div class="column mobiel">
+      <div class="content">
+      <img src="samsung.jpg" alt="Car" style="width:100%">
+        <h4>Samsung</h4>
+        <p>Samsung mobiel te koop</p>
+      </div>
+    </div>
+    <div class="column mobiel">
+      <div class="content">
+      <img src="huawei.jpg" alt="Car" style="width:100%">
+        <h4>Huawei</h4>
+        <p>Huawei telefoon gebruikt</p>
+      </div>
+    </div>
+  
+    <div class="column lego">
+      <div class="content">
+        <img src="lego1.jpg" alt="Car" style="width:100%">
+        <h4>Lego 1</h4>
+        <p>Lego nieuw in doos</p>
+      </div>
+    </div>
+    <div class="column lego">
+      <div class="content">
+      <img src="lego2.jpg" alt="Car" style="width:100%">
+        <h4>Lego 2</h4>
+        <p>Lego gebruikt</p>
+      </div>
+    </div>
+    <div class="column lego">
+      <div class="content">
+      <img src="lego3.jpg" alt="Car" style="width:100%">
+        <h4>Lego 3</h4>
+        <p>Lego aanbieding</p>
+      </div>
+    </div>
+  <!-- END GRID -->
+  </div>
+</div>
+<div class="card">
+<h2>Nieuwsbrief</h2>
 <form action="/action_page.php">
   <div class="container">
     <h2>Aanmelden voor de nieuwsbrief</h2>
   </div>
 
-  <div class="container" style="background-color:white">
-    <input type="text" placeholder="Name" name="name" required>
-    <input type="text" placeholder="Email address" name="mail" required>
-    <label>
-      <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
-    </label>
+  <div class="container" style="background-color:rgb(243, 230, 54)">
+  <input type="text" placeholder="Name" name="name" required>
+  <input type="text" placeholder="Email address" name="mail" required>
+  <label>
+      <input type="checkbox" checked="checked" name="subscribe"> aanmelden wekelijkse mail
+  </label>
   </div>
 
   <div class="container">
@@ -124,10 +201,63 @@
   </div>
  </div>
 </div>
-
-<div class="footer">
-          <h2>Footer</h2>
-        </div>        
+<footer>
+  <div class="footer">
+    <div class="row">
+      <div class="col-sm-3 col-lg-3">
+        <div class="widget">
+          <h4> Get in touch with us</h4>
+          <address>
+            <strong>Website name pvt ltd.</strong><br>
+            Marktplaats Nederland<br>
+            Amsterdam 1
+          </address>
+          <p>
+               <i class="icon-phone"></i>(+31) 02010299019<br>
+               <i class="icon-envelope-alt"></i>marktplaats@hotmail
+          </p>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="widget">
+          <h4>Pagina's</h4>
+          <ul class="link-list">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Terms And Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sub-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="copyright">
+              <p>&copy; marktplaats - All Rights Reserverd</p>
+              <div class="credits">
+                Designed by <a href="www.marktplaats.nl"></a>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <ul class="social-network">
+          <li><a href="#" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+          <li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus"></i></a></li>
+        </ul>
+      </div>
+    </div>
   </div>        
+</footer>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+ 
+       
 </body>
 </html>
